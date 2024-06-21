@@ -1,0 +1,22 @@
+---
+title: "Plots"
+---
+
+Static plots can be easily customized by creating a theme. The theme `scatter_theme` is defined for a simple scatter plot in `setup.R`, which is then sourced and applied to the example plot below. Colors variables can also be defined in `setup.R` and then passed to ggplot arguments to customize plot elements.
+
+```{r, echo=TRUE}
+source('setup.R')
+
+iris |>
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point(color = point_color) +
+  ggtitle('An Example Plot') +
+  scatter_theme
+```
+
+::: {.callout-warning}
+
+Interactive plots generated with Plotly will generally follow predefined themes but will not preserve custom fonts.
+
+:::
+

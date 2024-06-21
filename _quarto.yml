@@ -1,0 +1,27 @@
+project:
+  type: website
+
+website:
+  title: "UW Quarto Site Template"
+  favicon: images/favicon.ico
+  navbar:
+    logo: images/header-logo.png
+  sidebar:
+    style: "floating"
+    
+execute:
+  echo: false
+  message: false
+  warning: false
+
+metadata-files:
+  - sidebar.yml
+
+format:
+  html:
+    theme: [default, custom.scss]
+    toc: true
+    mainfont: Red Hat Text
+
+
+

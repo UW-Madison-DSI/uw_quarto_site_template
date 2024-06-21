@@ -1,0 +1,23 @@
+---
+title: "About"
+---
+
+This is a [Quarto](https://quarto.org/) website template themed to (largely) conform with the web [visual identity guidelines](https://brand.wisc.edu/) set by the University of Wisconsin-Madison. This template is specifically for Quarto sites but could easily be used to customize notebooks, presentations, blogs, and other publishing mediums supported by Quarto. This template site covers some basic functionality of Quarto sites: please review the [Quarto docs](https://quarto.org/docs/reference/) for the full range of Quarto capabilities to fit your needs.
+
+::: {.callout-note appearance="simple"}
+
+This template is not intended to exactly mimic UW-branded sites but instead to provide Quarto users at UW-Madison a bare-bones site template with some fundamental UW theming. This template is not intended to be comprehensive: you may need to customize it to fit your specific needs.
+
+:::
+
+### Structure
+
+This template is primarily styled with two files:
+
+1. `custom.scss`: an [SCSS](https://sass-lang.com/) file that contains most of the customizing elements for the template, including importing [UW-approved fonts](https://brand.wisc.edu/visual-identity/typography/) from Google Fonts and styling various elements of the site using UW brand primary and secondary colors;
+
+2. `setup.R`: an R script that loads common packages and can be used to pass brand elements to R code throughout the site in order to customize visual elements such as plots.
+
+The `images` directory contains base images for the template, such as the UW shield logo for the header banner and a favicon for browser tabs.
+
+Other settings, such as code chunk behavior and navbar contents, can be changed in `_quarto.yml`. `sidebar.yml` controls the structure of the left-hand side navigation bar, including which pages are navigable via the bar.

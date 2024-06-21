@@ -1,0 +1,8 @@
+website:
+  sidebar:
+    contents:
+      - index.qmd
+      - section: Examples
+        contents:
+        - code.qmd
+        - plots.qmd
