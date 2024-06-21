@@ -9,6 +9,10 @@ website:
     logo: images/header-logo.png
   sidebar:
     style: "floating"
+  page-footer:
+    background: dark
+    left: UW-Madison Quarto Template [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/UW-Madison-DSI/uw_quarto_site_template){target=_blank}
+    right: This site is built with [Quarto](https://quarto.org/){target=_blank}
     
 execute:
   echo: false
