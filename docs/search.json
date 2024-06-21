@@ -1,0 +1,13 @@
+[
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "Code",
+    "section": "",
+    "text": "Code chunks are set, by default in _quarto.yml, not to echo or print messages or warnings. These settings can be changed in that file.\nAn example R code chunk, with echoing enabled, is below:\n\n2 + 2\n\n[1] 4\n\n\nQuarto also supports code chunks in some other languages, such as Python and Julia, with the installation of the reticulate package in R.\n\nimport numpy as np\n\na = np.array([['Go', 'Bucky'], ['Beat', 'Minnesota']])\n\na.shape\n\n(2, 2)",
+    "crumbs": [
+      "Examples",
+      "Code"
+    ]
+  }
+]
