@@ -1,8 +1,10 @@
 ---
-title: "About"
+title: "Home"
 ---
 
 This is a [Quarto](https://quarto.org/) website template themed to (largely) conform with the web [visual identity guidelines](https://brand.wisc.edu/) set by the University of Wisconsin-Madison. This template is specifically for Quarto sites but could easily be used to customize notebooks, presentations, blogs, and other publishing mediums supported by Quarto. This template site covers some basic functionality of Quarto sites: please review the [Quarto docs](https://quarto.org/docs/reference/) for the full range of Quarto capabilities to fit your needs.
+
+This template is an initiative of the [UW-Madison Data Science Institute](https://datascience.wisc.edu/institute/). The source code for the template is [available on GitHub](https://github.com/UW-Madison-DSI/uw_quarto_site_template).
 
 ::: {.callout-note appearance="simple"}
 

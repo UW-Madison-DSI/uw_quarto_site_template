@@ -2,6 +2,8 @@
 title: "Plots"
 ---
 
+## Static Plots
+
 Static plots can be easily customized by creating a theme. The theme `scatter_theme` is defined for a simple scatter plot in `setup.R`, which is then sourced and applied to the example plot below. Colors variables can also be defined in `setup.R` and then passed to ggplot arguments to customize plot elements.
 
 ```{r, echo=TRUE}
@@ -14,9 +16,24 @@ iris |>
   scatter_theme
 ```
 
-::: {.callout-warning}
+## Interactive Plots with Plotly
 
-Interactive plots generated with Plotly will generally follow predefined themes but will not preserve custom fonts.
+Quarto also supports interactive plots. One of the easiest ways to create interactive plots in R is to create a ggplot2 object and then use the `ggplotly` function from the `plotly` package to render the ggplot2 object as a Plotly plot. However, *Plotly will not recognize custom fonts by default*. There are [ways around this](https://github.com/plotly/plotly.R/issues/2117#issuecomment-1341158070) when executing code chunks locally but they will not render reliably when building Quarto sites.
 
-:::
+The easiest solution is to simply use Plotly's default font by specifying a new theme (`scatter_theme_plotly`) that is identical to the theme used for ggplot2 objects except removing custom fonts.
+
+```{r, echo=TRUE}
+source('setup.R')
+
+# Build ggplot2 object
+p1 <- iris |>
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point(color = point_color) +
+  ggtitle('An Example Plot') +
+  scatter_theme_plotly # Same as `scatter_theme` but with fonts removed
+
+# Render plotly object from ggplot2 object (alternatively, just build the plot
+# in plotly)
+ggplotly(p1)
+```
 

@@ -12,6 +12,7 @@ library(tidyverse)
 library(showtext)
 library(reticulate)
 library(plotly)
+library(htmltools)
 
 #####
 # Plot themes
@@ -37,7 +38,10 @@ scatter_theme <- theme(
   plot.background = element_rect(fill = background_color, color = background_color)
 )
 
-iris |>
-  ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
-  geom_point(color = point_color) +
-  scatter_theme
+# Create a custom theme for plotly objects (without custom fonts)
+scatter_theme_plotly <- theme(
+  panel.grid = element_line(color = grid_color),
+  panel.background = element_rect(fill = background_color),
+  legend.background = element_rect(fill = background_color),
+  plot.background = element_rect(fill = background_color, color = background_color)
+)
