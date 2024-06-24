@@ -2,6 +2,8 @@
 title: "Code"
 ---
 
+## R
+
 ```{r}
 source('setup.R')
 ```
@@ -12,4 +14,30 @@ An example R code chunk, with echoing enabled, is below:
 
 ```{r, echo=TRUE}
 2 + 2
+```
+
+## Other Languages
+
+Quarto also [supports other languages](https://quarto.org/docs/faq/#what-programming-languages-are-supported-in-quarto), such as Python (via the [`reticulate`](https://rstudio.github.io/reticulate/) package) and Julia (via the [`JuliaCall`](https://cran.r-project.org/web/packages/JuliaCall/index.html) package). Requires installation of these languages.
+
+Python:
+```{python, echo = TRUE}
+import numpy as np
+
+a = np.array([1, 2, 3, 4, 5])
+
+print(a)
+```
+
+Julia:
+
+```{julia, echo = TRUE}
+using Plots
+
+plot(sin, 
+     x->sin(2x), 
+     0, 
+     2π, 
+     leg=false, 
+     fill=(0,:lavender))
 ```

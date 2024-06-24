@@ -6,3 +6,4 @@ website:
         contents:
         - code.qmd
         - plots.qmd
+        - tables.qmd

@@ -1,0 +1,30 @@
+---
+title: "Tables"
+---
+
+```{r}
+source('setup.R')
+```
+
+Adding interactive [DataTables](https://datatables.net/) to your Quarto products is easy with the [`DT`](https://rstudio.github.io/DT/) package. There are additional options within `DT` that allow for a wide range of DataTable customizations, including buttons that allow users to download underlying data in multiple formats.
+
+```{r, echo=TRUE}
+report_name <- 'mt_cars'
+
+tibble::rownames_to_column(mtcars, var = 'car') |>
+  datatable(
+    extensions = 'Buttons',
+    options = list(
+      autoWidth = TRUE,
+      scrollX = TRUE,
+      pageLength = 6,
+      dom = 'Bfrtip',
+      buttons = list(
+        list(extend = 'copy'),
+        list(extend = 'csv', filename = report_name),
+        list(extend = 'excel', filename = report_name),
+        list(extend = 'pdf', filename = report_name, title = report_name)
+      )
+    )
+  )
+```

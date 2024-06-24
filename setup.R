@@ -13,6 +13,8 @@ library(showtext)
 library(reticulate)
 library(plotly)
 library(htmltools)
+library(DT)
+library(JuliaCall)
 
 #####
 # Plot themes
@@ -45,3 +47,10 @@ scatter_theme_plotly <- theme(
   legend.background = element_rect(fill = background_color),
   plot.background = element_rect(fill = background_color, color = background_color)
 )
+
+####
+# Non-R package installation
+
+# Install numpy with Reticulate: py_install("numpy")
+
+# Use `import Pkg Pkg.add("Plots")` locally to install the Plots package with your local Julia installation
